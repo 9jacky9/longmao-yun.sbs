@@ -1,0 +1,53 @@
+/* Ghibli Forest Totoro - longmao-yun.sbs */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: #06130e; color: #ecfdf5; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; line-height: 1.65; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: inherit; transition: all 0.25s ease; }
+
+.navbar { background: rgba(11, 32, 24, 0.88); backdrop-filter: blur(14px); border-bottom: 1px solid #153e30; position: sticky; top: 0; z-index: 100; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+.brand-logo { font-size: 20px; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px; }
+.brand-badge { background: #059669; color: #fff; font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 700; }
+.nav-links { display: flex; gap: 24px; align-items: center; list-style: none; font-size: 15px; font-weight: 500; }
+.nav-links a:hover { color: #34d399; }
+
+.hero-section { padding: 70px 0 60px; background: radial-gradient(circle at 50% 25%, rgba(5, 150, 105, 0.15) 0%, transparent 65%); }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 36px; align-items: center; }
+.hero-tag { display: inline-block; background: rgba(5, 150, 105, 0.15); color: #34d399; border: 1px solid rgba(5, 150, 105, 0.35); padding: 5px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 16px; }
+.hero-title { font-size: 38px; line-height: 1.25; font-weight: 800; color: #fff; margin-bottom: 16px; }
+.hero-title-highlight { color: #34d399; }
+.hero-desc { font-size: 16px; color: #a7f3d0; line-height: 1.7; margin-bottom: 26px; }
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+.btn-aff-cta { display: inline-flex; align-items: center; justify-content: center; padding: 13px 30px; font-weight: 700; font-size: 15px; border-radius: 14px; background: linear-gradient(135deg, #059669, #10b981); color: #fff; box-shadow: 0 4px 20px rgba(5, 150, 105, 0.4); }
+.btn-aff-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(5, 150, 105, 0.55); }
+.btn-tizi-dofollow { display: inline-flex; align-items: center; justify-content: center; padding: 12px 26px; font-weight: 600; font-size: 15px; border-radius: 14px; border: 1.5px solid #153e30; background: #0b2018; color: #34d399; }
+.btn-tizi-dofollow:hover { border-color: #34d399; background: #122d23; }
+
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.feature-card { background: #0b2018; border: 1px solid #153e30; border-radius: 16px; padding: 26px; }
+.feature-card:hover { border-color: #059669; transform: translateY(-3px); }
+.feature-title { font-size: 18px; font-weight: 700; color: #fff; margin: 10px 0; }
+.feature-desc { font-size: 14px; color: #a7f3d0; line-height: 1.65; }
+
+.pricing-section { padding: 70px 0; background: #06130e; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 26px; }
+.price-card { background: #0b2018; border: 1px solid #153e30; border-radius: 18px; padding: 30px 22px; text-align: center; }
+.price-card.featured { border-color: #059669; box-shadow: 0 0 25px rgba(5, 150, 105, 0.25); }
+.price-tag { font-size: 36px; font-weight: 800; color: #fff; margin: 14px 0; }
+.price-features { list-style: none; margin: 18px 0; text-align: left; font-size: 14px; color: #d1fae5; line-height: 2; }
+.price-features li::before { content: "🍃 "; }
+
+footer { background: #030806; border-top: 1px solid #153e30; padding: 45px 0 25px; font-size: 14px; color: #6ee7b7; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-bottom: 24px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+
+@media(max-width: 868px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-actions { justify-content: center; }
+  .nav-links { display: none; }
+}
+
+/* Article Card Grid & Hover Effects */
+.article-card { transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease; }
+.article-card:hover { transform: translateY(-4px); border-color: #059669 !important; box-shadow: 0 10px 25px rgba(0,0,0,0.25) !important; }
